@@ -1,12 +1,15 @@
 export(rsle)
-
 export(explode_icd)
 export(sim_target_icd)
 export(sim_target_gbd)
 export(map_gbd)
 export(redistribute_gbd)
 export(redistribute_gbd_all)
-
 export(plot_idd)
 export(plot_yll)
 export(tab)
+
+import(bd)
+import(ggplot2)
+importFrom(haven, read_sas)
+importFrom(knitr, kable)

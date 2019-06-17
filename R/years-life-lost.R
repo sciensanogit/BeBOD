@@ -83,7 +83,7 @@ function(x) {
 
 ## redistribute based on GBD causes
 redistribute_gbd <-
-function(def, expand = FALSE, yr = yr) {
+function(def, expand = FALSE, yr. = yr) {
   if (expand) {
     def2 <- expand_gbd(def)
 
@@ -119,7 +119,7 @@ function(def, expand = FALSE, yr = yr) {
   # export target
   write.csv2(
     with(target, xtabs(~ cause4 + AGE + sex)),
-    file = paste0("TARGET", yr, "/gbd-", strsplit(def, " \\| ")[[1]][1], ".csv"))
+    file = paste0("TARGET", yr., "/gbd-", strsplit(def, " \\| ")[[1]][1], ".csv"))
 
   # compile output
   out <- cbind(new, cause4 = s)
@@ -130,7 +130,7 @@ function(def, expand = FALSE, yr = yr) {
 
 ## redistribute to all GBD causes
 redistribute_gbd_all <-
-function(yr = yr) {
+function(yr. = yr) {
   # show status
   cat("\nALL\n")
 
@@ -156,7 +156,7 @@ function(yr = yr) {
   # export target
   write.csv2(
     with(target, xtabs(~ cause4 + AGE + sex)),
-    file = paste0("TARGET", yr, "/gbd-all.csv"))
+    file = paste0("TARGET", yr., "/gbd-all.csv"))
 
   # compile output
   out <- cbind(new, cause4 = s)

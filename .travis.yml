@@ -6,4 +6,4 @@ warnings_are_errors: true
 
 sudo: required
 
-r_github_packages: r-lib/bd
+r_github_packages: brechtdv/bd

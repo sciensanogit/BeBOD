@@ -3,7 +3,7 @@
 
 ### RESIDUAL LIFE EXPECTANCY
 
-rle <-
+rsle <-
 function(x) {
   # GBD 2017 standard life expectancy table
   GBD <-

@@ -1,4 +1,4 @@
-export(rle)
+export(rsle)
 
 export(explode_icd)
 export(sim_target_icd)

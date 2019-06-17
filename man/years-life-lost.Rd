@@ -1,6 +1,6 @@
 \name{YLL-functions}
 \alias{YLL-functions}
-\alias{rle}
+\alias{rsle}
 \alias{explode_icd}
 \alias{sim_target_icd}
 \alias{sim_target_gbd}
@@ -18,7 +18,7 @@ Helper functions for Years of Life Lost calculations.
 }
 
 \usage{
-rle(x)
+rsle(x)
 explode_icd(x)
 sim_target_icd(target, new)
 sim_target_gbd(target, new)

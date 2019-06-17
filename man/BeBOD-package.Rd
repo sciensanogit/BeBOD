@@ -25,7 +25,7 @@ The \pkg{BeBOD} package provides helper functions for the Belgian National Burde
 Available functions in the \pkg{BeBOD} package:
   \tabular{ll}{
     \strong{Years of Life Lost}\cr
-    \code{\link{rle}}	\tab Calculate residual life expectancy.\cr
+    \code{\link{rsle}}	\tab Calculate residual life expectancy.\cr
     \code{\link{explode_icd}}	\tab Expand ICD group into individual ICD codes.\cr
     \code{\link{sim_target_icd}}	\tab Simulate target specific causes based on ICD codes.\cr
     \code{\link{sim_target_gbd}}	\tab Simulate target specific causes based on GBD causes.\cr

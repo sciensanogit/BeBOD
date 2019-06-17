@@ -12,7 +12,7 @@ The BeBOD project is initiated and managed by Sciensano, the Belgian institute f
 
 Calculation of Years of Life Lost
 <table>
-<tr><td><code>rle</code></td><td>Calculate residual life expectancy</td></tr>
+<tr><td><code>rsle</code></td><td>Calculate residual life expectancy</td></tr>
 <tr><td><code>explode_icd</code></td><td>Expand ICD group into individual ICD codes</td></tr>
 <tr><td><code>sim_target_icd</code></td><td>Simulate target specific causes based on ICD codes</td></tr>
 <tr><td><code>sim_target_gbd</code></td><td>Simulate target specific causes based on GBD causes</td></tr>

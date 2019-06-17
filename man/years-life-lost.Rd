@@ -23,8 +23,8 @@ explode_icd(x)
 sim_target_icd(target, new)
 sim_target_gbd(target, new)
 map_gbd(x)
-redistribute_gbd(def, expand = FALSE)
-redistribute_gbd_all()
+redistribute_gbd(def, expand = FALSE, yr)
+redistribute_gbd_all(yr)
 plot_idd(mrt, red, level)
 plot_yll(mrt, red, level)
 tab(x)
@@ -36,6 +36,7 @@ tab(x)
   \item{new}{new dataset.}
   \item{def}{definition.}
   \item{expand}{should codes be expanded?}
+  \item{yr}{data year}
   \item{mrt}{original dataset.}
   \item{red}{redistributed dataset.}
   \item{level}{cause level.}

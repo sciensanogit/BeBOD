@@ -7,6 +7,5 @@ Authors@R: person("Brecht", "Devleesschauwer", role = c("aut", "cre"),
 Author: Brecht Devleesschauwer [aut, cre]
 Maintainer: Brecht Devleesschauwer <brechtdv@gmail.com>
 Description: Helper functions for the Belgian National Burden of Disease Study.
-Depends: R (>= 3.5.0)
-Imports: bd, ggplot2, haven, knitr
+Depends: R (>= 3.5.0), bd, ggplot2, haven, knitr
 License: GPL-2 | GPL-3

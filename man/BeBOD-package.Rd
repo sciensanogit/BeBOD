@@ -14,11 +14,11 @@ The \pkg{BeBOD} package provides helper functions for the Belgian National Burde
   \tabular{ll}{
     Package:    \tab  BeBOD\cr
     Type:       \tab  Package\cr
-    Version:    \tab  0.0.1\cr
-    Date:       \tab  2019-06-17\cr
+    Version:    \tab  0.0.2\cr
+    Date:       \tab  2019-10-10\cr
     Authors:    \tab  Brecht Devleesschauwer\cr
     Maintainer: \tab  Brecht Devleesschauwer <\email{brechtdv@gmail.com}>\cr
-    Depends:    \tab  R (>= 3.5.0)\cr
+    Depends:    \tab  R (>= 3.6.0)\cr
     License:    \tab  GPL (>= 2)\cr
 }
 

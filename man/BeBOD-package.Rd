@@ -14,8 +14,8 @@ The \pkg{BeBOD} package provides helper functions for the Belgian National Burde
   \tabular{ll}{
     Package:    \tab  BeBOD\cr
     Type:       \tab  Package\cr
-    Version:    \tab  0.0.2\cr
-    Date:       \tab  2019-10-10\cr
+    Version:    \tab  0.0.3\cr
+    Date:       \tab  2019-10-16\cr
     Authors:    \tab  Brecht Devleesschauwer\cr
     Maintainer: \tab  Brecht Devleesschauwer <\email{brechtdv@gmail.com}>\cr
     Depends:    \tab  R (>= 3.6.0)\cr

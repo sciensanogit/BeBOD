@@ -113,19 +113,23 @@ function(def, expand = FALSE, yr. = yr) {
       length(unique(target$cause4)), " level 4 causes)\n",
       sep = "")
 
-  # tabulate > simulate
-  s <- sim_target_gbd(target, new)
+  # only proceed if idd exists
+  if (nrow(mrti) > 0) {
+  
+    # tabulate > simulate
+    s <- sim_target_gbd(target, new)
 
-  # export target
-  write.csv2(
-    with(target, xtabs(~ cause4 + AGE + sex)),
-    file = paste0("TARGET", yr., "/gbd-", strsplit(def, " \\| ")[[1]][1], ".csv"))
+    # export target
+    write.csv2(
+      with(target, xtabs(~ cause4 + AGE + sex)),
+      file = paste0("TARGET", yr., "/gbd-", strsplit(def, " \\| ")[[1]][1], ".csv"))
 
-  # compile output
-  out <- cbind(new, cause4 = s)
+    # compile output
+    out <- cbind(new, cause4 = s)
 
-  # output
-  out
+    # output
+    return(out)
+	}
 }
 
 ## redistribute to all GBD causes

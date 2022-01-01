@@ -1,12 +1,12 @@
 Package: BeBOD
 Title: Belgian National Burden of Disease Study
-Version: 0.0.3
-Date: 2019-10-16
+Version: 0.0.4
+Date: 2022-01-01
 Authors@R: person("Brecht", "Devleesschauwer", role = c("aut", "cre"),
 	              email = "brechtdv@gmail.com")
 Author: Brecht Devleesschauwer [aut, cre]
 Maintainer: Brecht Devleesschauwer <brechtdv@gmail.com>
 Description: Helper functions for the Belgian National Burden of Disease Study.
-Depends: R (>= 3.6.0)
-Imports: bd, ggplot2, haven, knitr, scales, stats, utils
+Depends: R (>= 4.1.0)
+Imports: bd, fastmatch
 License: GPL-2 | GPL-3

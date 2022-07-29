@@ -14,8 +14,8 @@ The \pkg{BeBOD} package provides helper functions for the calculation of Years o
   \tabular{ll}{
     Package:    \tab  BeBOD\cr
     Type:       \tab  Package\cr
-    Version:    \tab  0.0.4\cr
-    Date:       \tab  2022-01-01\cr
+    Version:    \tab  0.0.5\cr
+    Date:       \tab  2022-07-29\cr
     Authors:    \tab  Brecht Devleesschauwer\cr
     Maintainer: \tab  Brecht Devleesschauwer <\email{brechtdv@gmail.com}>\cr
     Depends:    \tab  R (>= 4.1.0)\cr

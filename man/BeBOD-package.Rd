@@ -14,8 +14,8 @@ The \pkg{BeBOD} package provides helper functions for the calculation of Years o
   \tabular{ll}{
     Package:    \tab  BeBOD\cr
     Type:       \tab  Package\cr
-    Version:    \tab  0.0.8\cr
-    Date:       \tab  2023-05-18\cr
+    Version:    \tab  0.0.9\cr
+    Date:       \tab  2024-04-05\cr
     Authors:    \tab  Brecht Devleesschauwer\cr
     Maintainer: \tab  Brecht Devleesschauwer <\email{brechtdv@gmail.com}>\cr
     Depends:    \tab  R (>= 4.2.0)\cr
@@ -24,7 +24,8 @@ The \pkg{BeBOD} package provides helper functions for the calculation of Years o
 
 Available functions in the \pkg{BeBOD} package:
   \tabular{ll}{
-    \code{\link{rsle}}	\tab Calculate residual life expectancy.\cr
+    \code{\link{rsle}}	\tab Calculate residual life expectancy, GBD 2019 standard life table.\cr
+    \code{\link{rsle2021}}	\tab Calculate residual life expectancy, GBD 2021 standard life table.\cr
     \code{\link{explode_icd}}	\tab Expand ICD group into individual ICD codes.\cr
     \code{\link{map_gbd}}	\tab Map level 4 GBD cause to other levels.\cr
   }

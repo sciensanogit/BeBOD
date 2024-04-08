@@ -1,28 +1,28 @@
-\name{BeBOD-package}
-\alias{BeBOD-package}
-\alias{BeBOD}
+\name{BeBOD2-package}
+\alias{BeBOD2-package}
+\alias{BeBOD2}
 
 \docType{package}
 
 \title{Helper Functions for the Belgian National Burden of Disease Study}
 
 \description{
-The \pkg{BeBOD} package provides helper functions for the calculation of Years of Life Lost as part of the Belgian National Burden of Disease Study.
+The \pkg{BeBOD2} package provides helper functions for the calculation of Years of Life Lost as part of the Belgian National Burden of Disease Study.
 }
 
 \details{
   \tabular{ll}{
-    Package:    \tab  BeBOD\cr
+    Package:    \tab  BeBOD2\cr
     Type:       \tab  Package\cr
-    Version:    \tab  0.0.9\cr
-    Date:       \tab  2024-04-05\cr
+    Version:    \tab  0.0.10\cr
+    Date:       \tab  2024-04-08\cr
     Authors:    \tab  Brecht Devleesschauwer\cr
     Maintainer: \tab  Brecht Devleesschauwer <\email{brechtdv@gmail.com}>\cr
     Depends:    \tab  R (>= 4.2.0)\cr
     License:    \tab  GPL (>= 2)\cr
 }
 
-Available functions in the \pkg{BeBOD} package:
+Available functions in the \pkg{BeBOD2} package:
   \tabular{ll}{
     \code{\link{rsle}}	\tab Calculate residual life expectancy, GBD 2019 standard life table.\cr
     \code{\link{rsle2021}}	\tab Calculate residual life expectancy, GBD 2021 standard life table.\cr
@@ -31,7 +31,7 @@ Available functions in the \pkg{BeBOD} package:
   }
 }
 
-Available datasets in the \pkg{BeBOD} package:
+Available datasets in the \pkg{BeBOD2} package:
   \tabular{ll}{
     \code{\link{gbd}}	\tab ICD10 to GBD cause list map.\cr
     \code{\link{causelist}}	\tab Master cause list used in the BeBOD study.\cr

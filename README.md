@@ -25,5 +25,5 @@ The BeBOD project is initiated and managed by Sciensano, the Belgian institute f
 
 To download and install the latest development version from GitHub:
 ```r
-devtools::install_github("brechtdv/BeBOD")
+devtools::install_github("sciensanogit/BeBOD")
 ```

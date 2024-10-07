@@ -2,6 +2,8 @@ export(rsle)
 export(rsle2021)
 export(explode_icd)
 export(map_gbd)
+export(predict_with_best_inla_model)
+export(select_best_inla_model)
 
 import(bd)
 importFrom(fastmatch, fmatch)

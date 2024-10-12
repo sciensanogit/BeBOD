@@ -22,9 +22,11 @@
 #'         The predictions are for the rows in `new_data`, and the original data rows are excluded from the returned output.
 #'
 #' @examples
+#'\dontrun{
 #' # Assuming `best_model_output` is the result of `select_best_inla_model()`
 #' # and `new_data` is a data frame for prediction:
 #' predictions <- predict_with_best_inla_model(best_model_output, new_data, outcome_var = "outcome")
+#'}
 #'
 #' @export
 predict_with_best_inla_model <- function(best_model_output, new_data, outcome_var, Ntrials = NULL, verbose = TRUE, ...) {

@@ -8,5 +8,8 @@ Author: Brecht Devleesschauwer [aut, cre]
 Maintainer: Brecht Devleesschauwer <brechtdv@gmail.com>
 Description: Helper functions for the Belgian National Burden of Disease Study.
 Depends: R (>= 4.2.0)
-Imports: bd, fastmatch
+Imports: 
+    dplyr,
+    fastmatch
 License: GPL-2 | GPL-3
+RoxygenNote: 7.3.2

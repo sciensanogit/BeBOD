@@ -21,6 +21,7 @@
 #'   \item{original_data}{The original data used for fitting the models.}
 #'
 #' @examples
+#' \dontrun{
 #' # Define a list of models
 #' model_list <- list(
 #'   FIXED = ID ~ 1 + YEAR + SEX + AGEGR + REGION,
@@ -32,6 +33,7 @@
 #'
 #' # Access the best model
 #' best_inla_model <- best_model_output$best_inla_model
+#'}
 #'
 #' @export
 select_best_inla_model <- function(data, model_list, likelihood = "zeroinflatedbinomial0", metric = c("WAIC", "DIC"), Ntrials = NULL, verbose = TRUE, ...) {

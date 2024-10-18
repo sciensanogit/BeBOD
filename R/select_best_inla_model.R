@@ -46,11 +46,11 @@ select_best_inla_model <- function(data, model_list, likelihood = "zeroinflatedb
   # Allowed likelihood options for binomial and poisson families
   binomial_likelihoods <- c("binomial", "zeroinflatedbinomial0", "zeroinflatedbinomial1", "zeroinflatedbinomial2")
   poisson_likelihoods <- c("poisson", "zeroinflatedpoisson0", "zeroinflatedpoisson1", "zeroinflatedpoisson2", "xpoisson")
-  gamma_likelihoods <- c("gamma")
+  other_likelihoods <- c("gamma", "beta")
   
   # Check if the provided likelihood is valid
-  if (!(likelihood %in% c(binomial_likelihoods, poisson_likelihoods, gamma_likelihoods))) {
-    stop("Invalid likelihood provided. Please choose a valid binomial or poisson likelihood.")
+  if (!(likelihood %in% c(binomial_likelihoods, poisson_likelihoods, other_likelihoods))) {
+    stop("Invalid likelihood provided. Please choose a valid binomial, poisson, gamma or beta likelihood.")
   }
   
   # Use match.arg to ensure metric is either "WAIC" or "DIC"

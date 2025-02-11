@@ -1,31 +1,31 @@
-### BeBOD / Belgian National Burden of Disease Study
-### .. Years of Life Lost
-
-### RESIDUAL LIFE EXPECTANCY
-
-rsle <-
-function(x) {
-  # GBD 2019 standard life expectancy table
-  # assume 0 YLL for highest observed lifespan
-  GBD <-
-  data.frame(
+#' Residual Standard Life Expectancy (2019)
+#' 
+#' Computes the residual life expectancy for a given age using the GBD 2019 life expectancy table.
+#' 
+#' @param x Age(s) to calculate residual life expectancy for.
+#' @return Residual life expectancy for the given age(s).
+#' @export
+rsle <- function(x) {
+  GBD <- data.frame(
     age = c(0, 1, 5 * 1:19, 122),
     LE = c(88.8718951, 88.00051053, 84.03008056, 79.04633476, 74.0665492,
            69.10756792, 64.14930031, 59.1962771, 54.25261364, 49.31739311,
            44.43332057, 39.63473787, 34.91488095, 30.25343822, 25.68089534,
            21.28820012, 17.10351469, 13.23872477, 9.990181244, 7.617724915, 
-           5.922359078, 0))
-
-  # return RLE value for age 'x'					
+           5.922359078, 0)
+  )
   approx(GBD$age, GBD$LE, x, rule = 1:2)$y
 }
 
-rsle2021 <-
-function(x) {
-  # GBD 2021 standard life expectancy table
-  # assume 0 YLL for highest observed lifespan
-  GBD <-
-  data.frame(
+#' Residual Standard Life Expectancy (2021)
+#' 
+#' Computes the residual life expectancy for a given age using the GBD 2021 life expectancy table.
+#' 
+#' @param x Age(s) to calculate residual life expectancy for.
+#' @return Residual life expectancy for the given age(s).
+#' @export
+rsle2021 <- function(x) {
+  GBD <- data.frame(
     age = c(0, 7/365, 1/12, 6/12, 1:110, 122),
     LE = c(89.9580397, 89.9914760, 89.9574569, 89.5655011, 89.0721580, 
            88.0908707, 87.0953494, 86.0990298, 85.1023919, 84.1058089, 
@@ -49,18 +49,19 @@ function(x) {
            8.62421991, 8.56828751, 8.52982465, 8.49469343, 8.35913019, 
            8.27608396, 8.16781129, 8.01200167, 7.77794559, 7.57542585,
            7.36983878, 7.16124979, 6.94945024, 6.73412054, 6.36130011,
-           5.95447101, 5.51031821, 5.02500772, 4.49401111, 0))
-
-  # return RLE value for age 'x'					
+           5.95447101, 5.51031821, 5.02500772, 4.49401111, 0)
+  )
   approx(GBD$age, GBD$LE, x, rule = 1:2)$y
 }
 
-
-### REDISTRIBUTIONS
-
-## expand ICD sequence into individual ICD codes
-expand_icd <-
-function(x) {
+#' Expand ICD Sequence into Individual Codes
+#' 
+#' Expands a given ICD sequence (e.g., "A01:A05") into individual ICD codes.
+#' 
+#' @param x A character string representing an ICD sequence.
+#' @return A character string with the expanded ICD codes.
+#' @export
+expand_icd <- function(x) {
   if (grepl(":", x)) {
     b <- strsplit(x, ":")[[1]]
     X <- substr(b[1], 0, 1)
@@ -69,22 +70,33 @@ function(x) {
     fmt <- paste0("%0", nchar(substr(b[1], 2, nchar(b[1]))), "d")
     s <- sprintf(fmt, s)
     paste(paste0(X, s), collapse = "|")
-
+    
   } else {
     x
   }
 }
 
-## expand ICD group into individual ICD codes
-explode_icd <-
-function(x) {
+#' Explode ICD Group into Individual Codes
+#' 
+#' Expands a given ICD group into individual ICD codes by recursively calling `expand_icd`.
+#' 
+#' @param x A character string representing an ICD group.
+#' @return A character string with the expanded ICD codes.
+#' @export
+explode_icd <- function(x) {
   y <- gsub(" ", "", unlist(strsplit(x, "\\|")))
   paste(sapply(y, expand_icd), collapse = "|")
 }
 
-## map level 4 GBD cause to other levels
-map_gbd <-
-function(x) {
+#' Map GBD Level 4 Cause to Other Levels
+#' 
+#' Maps a Level 4 GBD cause to its corresponding Level 3, Level 2, and Level 1 categories.
+#' 
+#' @param x A vector of Level 4 GBD causes or ICD codes.
+#' @return A matrix with mappings to Level 4, Level 3, Level 2, and Level 1 categories.
+#' @importFrom fastmatch fmatch
+#' @export
+map_gbd <- function(x) {
   cause4 <- gbd$yll_cause_name[fmatch(x, gsub("\\.", "", gbd$icd_code))]
   id <- fmatch(cause4, causelist$Level4)
   cause3 <- causelist$Level3[id]

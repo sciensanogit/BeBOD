@@ -4,19 +4,19 @@
 ### .. BEBOD colors
 
 ## required packages
-# library(bd)
+library(readxl)
 
 ## ICD-GBD MAPPING
 
 ## import data
-gbd <- readxl("data-raw/ICD-GBD-mapping.xlsx")
+gbd <- BeBOD::readxl("data-raw/ICD-GBD-mapping.xlsx")
 
 ## drop decimal symbol from 'icd_code'
 gbd$icd_code <- gsub("\\.", "", gbd$icd_code)
 
 ## MASTER CAUSE LIST
 
-causelist <- readxl("data-raw/mastercauselist.xlsx")
+causelist <- BeBOD::readxl("data-raw/mastercauselist.xlsx")
 
 ## example of using the data: 'BeBOD:::causelist'
 ## package when defining colors: 
@@ -59,9 +59,9 @@ for (i in seq_along(L1)) {
 ord <- c("ALL CAUSES", ord)
 lvls <- c("Level0", lvls)
 
-##++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+##+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 ###                          CREATE COLORS ####
-##++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+##+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 ## LEVEL1 colors
 L1 <- unique(causelst$Level1)
@@ -71,12 +71,11 @@ scales::show_col(L1.cols)
 
 ## LEVEL2 colors
 L2 <- unique(causelst$Level2)
-L2.cols <- c(
-  "#3AAA35FF", "#006633FF", "#BCCF00FF", "#58595BFF", "#A5A5A5FF", "#FAD500FF", 
-  "#F29D00FF", "#C95117FF", "#E494C0FF", "#B93287FF", "#563B8CFF", "#84A5D7FF", 
-  "#60BCB8FF", "#228593FF", "#88D08FFF", "#00994CFF", "#E7E600FF", "#7A7B7DFF", 
-  "#FFD900FF", "#DB6F3FFF"
-)
+L2.cols <-
+  c("#3AAA35FF", "#006633FF", "#BCCF00FF", "#58595BFF", "#A5A5A5FF",
+    "#FAD500FF", "#F29D00FF", "#C95117FF", "#E494C0FF", "#B93287FF",
+    "#563B8CFF", "#84A5D7FF", "#60BCB8FF", "#228593FF", "#88D08FFF",
+    "#00994CFF", "#E7E600FF", "#7A7B7DFF", "#FFD900FF", "#DB6F3FFF")
 L2.lvls <- rep("Level2", length(L2))
 scales::show_col(L2.cols)
 
@@ -104,22 +103,22 @@ bebod_colors <-
   data.frame(
     "LEVEL" = c(L1.lvls, L2.lvls, L3.lvls),
     "CAUSE" = c(L1, L2, L3),
-    "COL" = c(L1.cols, L2.cols, L3.cols)
-  )
+    "COL" = c(L1.cols, L2.cols, L3.cols))
 
 ###
 ### SAVE DATA
 ###
 
-usethis::use_data(
-  gbd, 
-  causelist, 
-  bebod_colors,
-  internal = TRUE, 
-  overwrite = TRUE
-  )
+# usethis::use_data(
+#   gbd, 
+#   causelist, 
+#   bebod_colors,
+#   internal = TRUE, 
+#   overwrite = TRUE
+#   )
 
-# save(
-#   gbd,
-#   causelist,
-#   file = "R/sysdata.rda")
+save(
+  gbd,
+  causelist,
+  bebod_colors,
+  file = "R/sysdata.rda")

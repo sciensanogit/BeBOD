@@ -46,7 +46,7 @@ select_best_inla_model <- function(data, model_list, likelihood = "zeroinflatedb
   # Allowed likelihood options for binomial and poisson families
   binomial_likelihoods <- c("binomial", "zeroinflatedbinomial0", "zeroinflatedbinomial1", "zeroinflatedbinomial2")
   poisson_likelihoods <- c("poisson", "zeroinflatedpoisson0", "zeroinflatedpoisson1", "zeroinflatedpoisson2", "xpoisson")
-  other_likelihoods <- c("gamma", "beta")
+  other_likelihoods <- c("gamma", "beta","gaussian")
   
   # Check if the provided likelihood is valid
   if (!(likelihood %in% c(binomial_likelihoods, poisson_likelihoods, other_likelihoods))) {

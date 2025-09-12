@@ -1,7 +1,7 @@
 Package: BeBOD
 Title: Belgian National Burden of Disease Study
-Version: 0.0.12
-Date: 2025-03-01
+Version: 0.0.13
+Date: 2025-09-12
 Authors@R: person("Brecht", "Devleesschauwer", role = c("aut", "cre"),
 	              email = "brechtdv@gmail.com")
 Author: Brecht Devleesschauwer [aut, cre]

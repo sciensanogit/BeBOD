@@ -4,6 +4,7 @@
 ### .. BEBOD colors
 
 ## required packages
+library(ggsano)
 library(readxl)
 
 ## ICD-GBD MAPPING
